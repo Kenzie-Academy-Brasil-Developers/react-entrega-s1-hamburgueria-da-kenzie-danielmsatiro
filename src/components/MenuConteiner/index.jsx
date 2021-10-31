@@ -5,14 +5,13 @@ import Product from "../Product";
 
 function MenuConteiner({ products, filteredProducts, handleClick }) {
   return (
-    <ul className="box-conteiner">
-      {products.map((item) => (
-        <Product
-          key={item.id}
-          product={item}
-          handleClick={handleClick}
-        />
-      ))}
+    <ul className="conteiner">
+      {/* filteredProducts.length ? filteredProducts.map((item) => (
+            <Product key={item.id} product={item} handleClick={handleClick} />
+          ))
+        :  */products.map((item) => (
+            <Product key={item.id} product={item} handleClick={handleClick} />
+          ))}
     </ul>
   );
 }

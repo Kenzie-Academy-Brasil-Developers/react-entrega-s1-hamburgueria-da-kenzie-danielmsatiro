@@ -1,4 +1,3 @@
-import react from "react";
 import "./App.css";
 import { useState } from "react";
 import MenuConteiner from "./components/MenuConteiner";
@@ -36,16 +35,16 @@ function App() {
     },
     {
       id: 5,
-      name: "Coca",
+      name: "Coca Cola",
       category: "Bebidas",
-      price: 4.99,
+      price: 7.0,
       img: "https://i.ibb.co/fxCGP7k/coca-cola.png",
     },
     {
       id: 6,
-      name: "Fanta",
+      name: "McShake Ovomaltine",
       category: "Bebidas",
-      price: 4.99,
+      price: 10.0,
       img: "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
     },
   ]);
@@ -53,18 +52,19 @@ function App() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-
+  const [input, setInput] = useState("");
   function showProducts(input) {
-    setFilteredProducts(products.filter((item) => item.name === input));
+    return setFilteredProducts([...products].filter((item) => item.category === input));
   }
-
+  console.log(filteredProducts)
   function handleClick(productId) {
     /* if(!currentSale.some(item=>item.id===productId)) */
-    setCurrentSale([
+    console.log(products.find((item) => item.id === productId))
+    /* return setCurrentSale([
       ...currentSale,
-      products.find((item) => item.id === productId),
-    ]);
-   /*  console.log(currentSale) */
+      products.find((item) => item.id === productId)
+    ]); */
+    /*  console.log(currentSale) */
   }
 
   if (currentSale.length > 0)
@@ -73,16 +73,34 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="#" alt="logo"/>
-        <div className="search">
-          <input type="text" /* value */></input>
-          <button>Pesquisar</button>
+        <div className="logo">
+          <h1 className="logo--maior">
+            Burguer <span className="logo--menor">Kenzie</span>{" "}
+          </h1>
         </div>
-
+        <div className="search">
+          <input
+            className="search_input"
+            type="text"
+            value={input}
+            placeholder="Digitar Pesquisa"
+            onChange={(event) => setInput(event.target.value)}
+          ></input>
+          <button
+            className="button--green"
+            onClick={() => setFilteredProducts(showProducts(input))}
+          >
+            Pesquisar
+          </button>
+        </div>
       </header>
       <div className="App-main">
-        <MenuConteiner products={products} filteredProducts={filteredProducts} handleClick={handleClick}/>
-        <Cart currentSale={currentSale} cartTotal={cartTotal}/>
+        <MenuConteiner
+          products={products}
+          filteredProducts={filteredProducts}
+          handleClick={handleClick}
+        />
+        <Cart currentSale={currentSale} cartTotal={cartTotal} />
       </div>
     </div>
   );
