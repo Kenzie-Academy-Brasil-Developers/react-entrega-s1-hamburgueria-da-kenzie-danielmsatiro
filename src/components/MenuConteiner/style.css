@@ -1,0 +1,4 @@
+.box-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+}
