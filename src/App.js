@@ -56,8 +56,6 @@ function App() {
   const [cartTotal, setCartTotal] = useState(0);
 
   function showProducts(input) {
-    console.log(input);
-    console.log(products.filter((item) => item.category === input));
     setFilteredProducts(products.filter((item) => item.category === input));
   }
 

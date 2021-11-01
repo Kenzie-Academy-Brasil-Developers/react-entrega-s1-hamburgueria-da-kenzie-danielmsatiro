@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../components/Search/style.css";
 
-function Search({ setFilteredProducts, showProducts }) {
+function Search({ showProducts }) {
   const [input, setInput] = useState("");
 
   return (
@@ -21,7 +21,7 @@ function Search({ setFilteredProducts, showProducts }) {
         ></input>
         <button
           className="button--green"
-          onClick={() => setFilteredProducts(showProducts(input))}
+          onClick={() => showProducts(input)}
         >
           Pesquisar
         </button>

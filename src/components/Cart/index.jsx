@@ -20,11 +20,13 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
           <ul className="card_products">
             {currentSale.map((item) => (
               <li key={item.id} className="card_product">
-                <img
-                  className="product--img-cart"
-                  src={item.img}
-                  alt="imagem produto"
-                />
+                <div className="card_img">
+                  <img
+                    className="product--img-cart"
+                    src={item.img}
+                    alt="imagem produto"
+                  />
+                </div>
                 <div className="card_name">
                   <h3 className="product--name">{item.name}</h3>
                   <p className="product--category">{item.category}</p>

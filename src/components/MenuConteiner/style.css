@@ -2,4 +2,5 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    padding: 14px;
 }
