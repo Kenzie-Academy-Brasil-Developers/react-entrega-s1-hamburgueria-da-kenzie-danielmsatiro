@@ -1,17 +1,49 @@
-.App{
-    font-family: "Inter",sans-serif;
+.App {
+  font-family: "Inter", sans-serif;
 }
-.App-header{
-    width: 100%;
-    display: flex;
-    height: 139px;
-    flex-wrap: wrap;
-    padding: 14px;
-    box-sizing: border-box;
-    justify-content: center;
-    background: #F5F5F5;
+.App-header {
+  width: 100%;
+  display: flex;
+  height: 139px;
+  flex-wrap: wrap;
+  padding: 14px;
+  box-sizing: border-box;
+  justify-content: center;
+  background: #f5f5f5;
 }
 
-.App-main{
-    box-sizing: border-box;
+.App-main {
+  box-sizing: border-box;
+}
+
+.button--green {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11.5px 20px;
+  background: #27ae60;
+  border: 2px solid #27ae60;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.product--name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.product--category {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #828282;
 }

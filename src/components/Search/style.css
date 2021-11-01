@@ -21,7 +21,7 @@
   align-items: center;
   background: #ffffff;
   border: 2px solid #e0e0e0;
-  padding: 0px 10px 0px 15px;
+  padding: 10px;
   box-sizing: border-box;
   border-radius: 8px;
 }
@@ -33,20 +33,7 @@
   line-height: 19px;
   color: #e0e0e0;
   border: none;
+  width: 245px;
 }
 
-.button--green {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 11.5px 20px;
-  background: #27ae60;
-  border: 2px solid #27ae60;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
+
