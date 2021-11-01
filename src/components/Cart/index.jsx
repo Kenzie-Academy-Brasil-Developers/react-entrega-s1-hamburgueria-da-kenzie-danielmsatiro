@@ -5,7 +5,7 @@ function Cart({ currentSale, setCurrentSale, cartTotal }) {
 >usar classe diferente para botão remover
 criar um botão geral de remover tudo*/
   function removeItem(productId) {
-    setCurrentSale(currentSale.filter((item) => item.id !== productId));
+    setCurrentSale(currentSale.filter((item) => item.id !== parseInt(productId,10)));
   }
 
   return (
