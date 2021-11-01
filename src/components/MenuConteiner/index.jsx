@@ -4,7 +4,7 @@ import Product from "../Product";
 function MenuConteiner({ products, filteredProducts, handleClick, input }) {
   return (
     <>
-      {input?(
+      {filteredProducts.length?(
         <h2>Resultados para: <span>{input}</span></h2>
       ) : (
         <div></div>

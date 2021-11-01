@@ -58,7 +58,10 @@ function App() {
   const [input, setInput] = useState("");
 
   function showProducts(input) {
-    setFilteredProducts(products.filter((item) => item.category === input));
+    const filter = products.filter(
+      (item) => item.category === input || item.name === input
+    );
+    setFilteredProducts(filter);
   }
 
   function handleClick(productId) {
@@ -72,11 +75,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Search
-          showProducts={showProducts}
-          input={input}
-          setInput={setInput}
-        />
+        <Search showProducts={showProducts} input={input} setInput={setInput} />
       </header>
       <div className="App-main">
         <MenuConteiner
