@@ -56,7 +56,7 @@ function App() {
 
   function showProducts(input) {
     return setFilteredProducts(
-      [...products].filter((item) => item.category === input)
+      products.filter((item) => item.category === "Sanduíches")
     );
   }
 
@@ -64,11 +64,8 @@ function App() {
     if (!currentSale.some((item) => item.id === productId))
       setCurrentSale([
         ...currentSale,
-        products.find((item) => item.id === parseInt(productId, 10)),
+        products.find((item) => item.id === productId),
       ]);
-      if (currentSale.length > 0)
-    setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
-
   }
 
   return (
@@ -98,10 +95,15 @@ function App() {
       <div className="App-main">
         <MenuConteiner
           products={products}
-          /* filteredProducts={filteredProducts} */
+          filteredProducts={filteredProducts}
           handleClick={handleClick}
         />
-        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} cartTotal={cartTotal} />
+        <Cart
+          currentSale={currentSale}
+          setCurrentSale={setCurrentSale}
+          setCartTotal={setCartTotal}
+          cartTotal={cartTotal}
+        />
       </div>
     </div>
   );

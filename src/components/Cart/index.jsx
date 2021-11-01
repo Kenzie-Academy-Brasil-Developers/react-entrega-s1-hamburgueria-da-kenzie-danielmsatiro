@@ -1,12 +1,9 @@
 import "../../components/Cart/style.css";
-function Cart({ currentSale, setCurrentSale, cartTotal }) {
-  /* >Desenvolver a função de remover itens aqui dentro
->usar classes similares aos do Menuconteiner
->usar classe diferente para botão remover
-criar um botão geral de remover tudo*/
+function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
   function removeItem(productId) {
     setCurrentSale(currentSale.filter((item) => item.id !== parseInt(productId,10)));
   }
+  setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
 
   return (
     <div className="box-cart">
