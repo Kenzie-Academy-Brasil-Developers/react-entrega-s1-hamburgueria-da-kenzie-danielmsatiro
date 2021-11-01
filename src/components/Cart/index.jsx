@@ -9,7 +9,7 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
 
   return (
     <div className="box-cart">
-      <h2 className="titleCart">Carrinho de compras</h2>
+      <h2 className="title-cart">Carrinho de compras</h2>
       {!currentSale.length ? (
         <div className="card">
           <p className="message">Sua sacola está vazia</p>
