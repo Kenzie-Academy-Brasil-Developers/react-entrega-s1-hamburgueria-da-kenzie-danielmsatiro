@@ -66,11 +66,11 @@ function App() {
         ...currentSale,
         products.find((item) => item.id === parseInt(productId, 10)),
       ]);
+      if (currentSale.length > 0)
+    setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
+
   }
 
-  /* if (currentSale.length > 0)
-    setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
- */
   return (
     <div className="App">
       <header className="App-header">
@@ -101,7 +101,7 @@ function App() {
           /* filteredProducts={filteredProducts} */
           handleClick={handleClick}
         />
-        <Cart currentSale={currentSale} cartTotal={cartTotal} />
+        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} cartTotal={cartTotal} />
       </div>
     </div>
   );

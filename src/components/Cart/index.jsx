@@ -1,11 +1,11 @@
 import "../../components/Cart/style.css";
-function Cart({ currentSale, setcurrentSale, cartTotal }) {
+function Cart({ currentSale, setCurrentSale, cartTotal }) {
   /* >Desenvolver a função de remover itens aqui dentro
 >usar classes similares aos do Menuconteiner
 >usar classe diferente para botão remover
 criar um botão geral de remover tudo*/
   function removeItem(productId) {
-    setcurrentSale(currentSale.filter((item) => item.id !== productId));
+    setCurrentSale(currentSale.filter((item) => item.id !== productId));
   }
 
   return (
@@ -47,7 +47,7 @@ criar um botão geral de remover tudo*/
           <hr className="card_line" />
           <button
             className="button--remove-all"
-            onClick={() => setcurrentSale([])}
+            onClick={() => setCurrentSale([])}
           >
             Remover todos
           </button>
