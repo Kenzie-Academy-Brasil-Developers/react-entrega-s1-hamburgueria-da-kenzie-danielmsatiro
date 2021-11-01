@@ -1,0 +1,36 @@
+.logo {
+  width: 158px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo--maior {
+  font-size: 24px;
+  font-weight: 700;
+}
+.logo--menor {
+  font-size: 14px;
+  color: red;
+}
+.search {
+  width: 382px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 0px 10px 0px 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.search_input {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e0e0e0;
+  border: none;
+}

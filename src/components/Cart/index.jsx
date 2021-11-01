@@ -1,7 +1,9 @@
 import "../../components/Cart/style.css";
 function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
   function removeItem(productId) {
-    setCurrentSale(currentSale.filter((item) => item.id !== parseInt(productId,10)));
+    setCurrentSale(
+      currentSale.filter((item) => item.id !== parseInt(productId, 10))
+    );
   }
   setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
 
@@ -19,7 +21,7 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
             {currentSale.map((item) => (
               <li key={item.id} className="card_product">
                 <img
-                  className="product--img"
+                  className="product--img-cart"
                   src={item.img}
                   alt="imagem produto"
                 />
@@ -50,8 +52,6 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
           </button>
         </div>
       )}
-
-      {/* Usar condicional para o caso de a sacola estar vazia */}
     </div>
   );
 }

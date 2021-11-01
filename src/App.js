@@ -1,5 +1,7 @@
+import "./reset.css";
 import "./App.css";
 import { useState } from "react";
+import Search from "./components/Search";
 import MenuConteiner from "./components/MenuConteiner";
 import Cart from "./components/Cart";
 
@@ -52,12 +54,11 @@ function App() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-  const [input, setInput] = useState("");
 
   function showProducts(input) {
-    return setFilteredProducts(
-      products.filter((item) => item.category === "Sanduíches")
-    );
+    console.log(input);
+    console.log(products.filter((item) => item.category === input));
+    setFilteredProducts(products.filter((item) => item.category === input));
   }
 
   function handleClick(productId) {
@@ -71,26 +72,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="logo">
-          <h1 className="logo--maior">
-            Burguer <span className="logo--menor">Kenzie</span>{" "}
-          </h1>
-        </div>
-        <div className="search">
-          <input
-            className="search_input"
-            type="text"
-            value={input}
-            placeholder="Digitar Pesquisa"
-            onChange={(event) => setInput(event.target.value)}
-          ></input>
-          <button
-            className="button--green"
-            onClick={() => setFilteredProducts(showProducts(input))}
-          >
-            Pesquisar
-          </button>
-        </div>
+        <Search
+          setFilteredProducts={setFilteredProducts}
+          showProducts={showProducts}
+        />
       </header>
       <div className="App-main">
         <MenuConteiner

@@ -1,3 +1,5 @@
 .conteiner{
     display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
