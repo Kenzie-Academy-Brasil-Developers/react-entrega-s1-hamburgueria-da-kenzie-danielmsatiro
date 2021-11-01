@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "../../components/Search/style.css";
 
-function Search({ showProducts }) {
-  const [input, setInput] = useState("");
+function Search({ showProducts, input, setInput }) {
+  const [typed, setTyped] = useState("");
 
   return (
     <>
@@ -15,13 +15,16 @@ function Search({ showProducts }) {
         <input
           className="search_input"
           type="text"
-          value={input}
+          value={typed}
           placeholder="Digitar Pesquisa"
-          onChange={(event) => setInput(event.target.value)}
+          onChange={(event) => setTyped(event.target.value)}
         ></input>
         <button
           className="button--green"
-          onClick={() => showProducts(input)}
+          onClick={() => {
+            showProducts(input);
+            setInput(typed);
+          }}
         >
           Pesquisar
         </button>
