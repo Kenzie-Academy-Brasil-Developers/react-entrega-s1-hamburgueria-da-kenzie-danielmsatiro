@@ -53,23 +53,24 @@ function App() {
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [input, setInput] = useState("");
+
   function showProducts(input) {
-    return setFilteredProducts([...products].filter((item) => item.category === input));
+    return setFilteredProducts(
+      [...products].filter((item) => item.category === input)
+    );
   }
-  console.log(filteredProducts)
+
   function handleClick(productId) {
-    /* if(!currentSale.some(item=>item.id===productId)) */
-    console.log(products.find((item) => item.id === productId))
-    /* return setCurrentSale([
-      ...currentSale,
-      products.find((item) => item.id === productId)
-    ]); */
-    /*  console.log(currentSale) */
+    if (!currentSale.some((item) => item.id === productId))
+      setCurrentSale([
+        ...currentSale,
+        products.find((item) => item.id === parseInt(productId, 10)),
+      ]);
   }
 
-  if (currentSale.length > 0)
+  /* if (currentSale.length > 0)
     setCartTotal(currentSale.reduce((acc, item) => acc + item.price, 0));
-
+ */
   return (
     <div className="App">
       <header className="App-header">
@@ -97,7 +98,7 @@ function App() {
       <div className="App-main">
         <MenuConteiner
           products={products}
-          filteredProducts={filteredProducts}
+          /* filteredProducts={filteredProducts} */
           handleClick={handleClick}
         />
         <Cart currentSale={currentSale} cartTotal={cartTotal} />
