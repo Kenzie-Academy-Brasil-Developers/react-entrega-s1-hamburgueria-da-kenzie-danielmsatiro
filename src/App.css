@@ -74,9 +74,11 @@
   }
   .conteiner {
     flex-wrap: wrap;
+    max-width: 972px;
   }
   .App-main {
     display: flex;
+    flex-wrap: wrap;
   }
   .box-cart {
     max-width: 362px;
