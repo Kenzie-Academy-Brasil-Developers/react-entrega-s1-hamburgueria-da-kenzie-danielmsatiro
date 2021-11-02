@@ -1,7 +1,6 @@
 import "../../components/Search/style.css";
 
 function Search({ showProducts, input, setInput }) {
-
   return (
     <>
       <div className="logo">

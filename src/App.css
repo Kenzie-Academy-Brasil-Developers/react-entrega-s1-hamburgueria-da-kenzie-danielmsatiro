@@ -1,15 +1,18 @@
 .App {
   font-family: "Inter", sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .App-header {
   width: 100%;
   min-width: 411px;
   display: flex;
+  flex-direction: column;
   height: 139px;
-  flex-wrap: wrap;
   padding: 14px;
   box-sizing: border-box;
   justify-content: center;
+  align-items: center;
   background: #f5f5f5;
 }
 
@@ -49,4 +52,36 @@
   font-size: 12px;
   line-height: 16px;
   color: #828282;
+}
+
+@media (min-width: 690px) {
+  .App-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .App-main {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin: 14px 0px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .App {
+    max-width: 1600px;
+  }
+  .conteiner {
+    flex-wrap: wrap;
+  }
+  .App-main {
+    display: flex;
+  }
+  .box-cart {
+    max-width: 362px;
+  }
+  .box-cart .card .title-cart {
+    margin-right: 0px;
+  }
 }

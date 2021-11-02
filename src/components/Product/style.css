@@ -6,7 +6,8 @@
   box-sizing: border-box;
   border-radius: 5px;
   flex: none;
-  margin: 14px;
+  margin-inline: 10px;
+  margin-top: 10px;
   overflow: hidden;
 }
 .conteiner_card .conteiner_img {

@@ -1,8 +1,7 @@
 .box-cart {
   width: 100%;
   min-height: 223px;
-  padding: 14px;
-  margin-right: 14px;
+  margin-top: 14px;
 }
 
 .box-cart .title-cart {
@@ -14,7 +13,6 @@
   line-height: 24px;
   color: #ffffff;
   padding: 20px;
-  margin-right: 14px;
 }
 
 .box-cart .card {
@@ -22,15 +20,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 10px;
-  margin-right: 14px;
+  padding: 10px 10px;
   min-height: 158px;
   background: #f5f5f5;
   border-radius: 0px 0px 5px 5px;
-}
-
-.box-cart .card {
-  justify-content: space-between;
 }
 
 .box-cart .card .message {

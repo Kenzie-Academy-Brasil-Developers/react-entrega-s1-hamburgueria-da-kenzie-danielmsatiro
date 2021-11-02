@@ -16,7 +16,7 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
           <p className="message--adicionar">Adicionar Itens</p>
         </div>
       ) : (
-        <div className="card card--ajuste">
+        <div className="card card">
           <ul className="card_products">
             {currentSale.map((item) => (
               <li key={item.id} className="card_product">
