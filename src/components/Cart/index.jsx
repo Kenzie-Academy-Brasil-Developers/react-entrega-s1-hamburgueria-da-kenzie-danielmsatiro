@@ -16,7 +16,7 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
           <p className="message--adicionar">Adicionar Itens</p>
         </div>
       ) : (
-        <div className="card">
+        <div className="card card--ajuste">
           <ul className="card_products">
             {currentSale.map((item) => (
               <li key={item.id} className="card_product">
@@ -41,11 +41,11 @@ function Cart({ currentSale, setCurrentSale, setCartTotal, cartTotal }) {
               </li>
             ))}
           </ul>
+          <hr className="card_line" />
           <div className="card_total">
             <p className="total--text">Total</p>
-            <p className="total--text">R$ {cartTotal}</p>
+            <p className="total--price">R$ {cartTotal.toFixed(2)}</p>
           </div>
-          <hr className="card_line" />
           <button
             className="button--remove-all"
             onClick={() => setCurrentSale([])}

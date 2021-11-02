@@ -1,5 +1,21 @@
-.conteiner{
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+.conteiner {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.search-result {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  color: #333333;
+}
+
+.search-target {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  color: #828282;
 }
