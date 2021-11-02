@@ -56,10 +56,35 @@ function App() {
   const [cartTotal, setCartTotal] = useState(0);
 
   const [input, setInput] = useState("");
+  const [found, setFound] = useState(true);
 
   function showProducts(input) {
+    const some = products.some(
+      (item) =>
+        input
+          .toLowerCase()
+          .split("")
+          .every(
+            (letter, index) => letter === item.category.toLowerCase()[index]
+          ) ||
+        input
+          .toLowerCase()
+          .split("")
+          .every((letter, index) => letter === item.name.toLowerCase()[index])
+    );
+    setFound(some);
     const filter = products.filter(
-      (item) => item.category === input || item.name === input
+      (item) =>
+        input
+          .toLowerCase()
+          .split("")
+          .every(
+            (letter, index) => letter === item.category.toLowerCase()[index]
+          ) ||
+        input
+          .toLowerCase()
+          .split("")
+          .every((letter, index) => letter === item.name.toLowerCase()[index])
     );
     setFilteredProducts(filter);
   }
@@ -83,6 +108,7 @@ function App() {
           filteredProducts={filteredProducts}
           handleClick={handleClick}
           input={input}
+          found={found}
         />
         <Cart
           currentSale={currentSale}

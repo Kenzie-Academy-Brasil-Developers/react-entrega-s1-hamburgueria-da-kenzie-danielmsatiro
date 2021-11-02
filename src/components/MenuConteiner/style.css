@@ -12,6 +12,12 @@
   color: #333333;
 }
 
+.search-result--red {
+  color: red;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .search-target {
   font-style: normal;
   font-weight: bold;
