@@ -25,6 +25,9 @@
   box-sizing: border-box;
   border-radius: 8px;
 }
+.search:focus-within{
+  border: 2px solid #333333;
+}
 .search_input {
   font-family: "Inter";
   font-style: normal;
@@ -38,4 +41,9 @@
 
 .search_input::placeholder {
   color: #e0e0e0;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
 }
